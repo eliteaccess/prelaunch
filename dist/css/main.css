@@ -98,6 +98,196 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+:root {
+  --main-bg-color: #101011;
+  --main-text-color: white;
+  --secondary-color: #FFAD1C;
+  --tertiary-color: #1B1D20;
+}
+
+html, body {
+  background: var(--main-bg-color);
+  background-image: url('../img/concertlarge.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+  color: var(--main-text-color);
+  font-family: canada-type-gibson, roboto, helvetica, arial, sans-serif;
+  font-size: 16px;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 4rem;
+}
+
+#logo {
+  width: 10%;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 2.625rem;
+  width: 40rem;
+  line-height: 2.75rem;
+  margin-bottom: .25rem;
+  text-shadow: 0px 0px 5px #101011;
+}
+
+h2 {
+  color: var(--secondary-color);
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 3rem 0 2rem;
+  text-shadow: 0px 0px 5px #101011;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  line-height: 1.25rem;
+}
+
+p {
+  font-size: 1rem;
+  width: 33rem;
+  margin-bottom: 2rem;
+  text-shadow: 0px 0px 5px #101011;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  display: flex;
+  align-items: flex-start;
+  width: 30%;
+}
+
+li div {
+  width: 100%;
+}
+
+li img {
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+li p {
+  width: auto;
+}
+
+.mailto {
+  color: var(--secondary-color);
+  background: var(--tertiary-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: .875rem;
+  height: 45px;
+  line-height: 45px;
+  padding: 10px 20px;
+  border-radius: 45px;
+}
+
+.custom-mailchimp {
+  background: white;
+  font-family: canada-type-gibson, roboto, helvetica, arial, sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 5px 0 5px 5px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 2rem;
+}
+
+#mc-embedded-subscribe-form {
+  width: auto;
+  display: inline-block;
+}
+
+#mc-embedded-subscribe {
+  background: var(--secondary-color);
+  color: var(--main-bg-color);
+  height: 60px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0 30px;
+}
+
+#mc-embedded-subscribe:hover {
+  cursor: pointer;
+  background: #FFB412;
+}
+
+.email {
+  width: 33rem;
+  border: none;
+  outline: none;
+  padding-left: 1rem;
+}
+
+@media screen and (max-width: 1200px) { 
+  html, body {
+    background-image: url('../img/concertsmall.png');
+  }
+}
+
+@media screen and (max-width: 850px) { 
+  html, body {
+    background-image: url('../img/concertxsmall.png');
+  }
+  h1, p {
+    width: 100%;
+  }
+  ul {
+    flex-direction: column;
+  }
+  li {
+    width: 100%;
+  }
+  .mailto {
+    margin: 0 auto;
+    display: inline-block;
+  }
+  #mc-embedded-subscribe-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #mc-embedded-subscribe {
+    width: 100%;
+    margin-right: 5px;
+    border: none;
+    outline: none;
+    line-height: 60px;
+  }
+  .custom-mailchimp {
+    flex-direction: column;
+    height: auto;
+  }
+  .email {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    padding-right: 1rem;
+  }
+}
+
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
