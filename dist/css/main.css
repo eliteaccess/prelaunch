@@ -1,0 +1,460 @@
+/*! HTML5 Boilerplate v7.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+:root {
+  --main-bg-color: #101011;
+  --main-text-color: white;
+  --secondary-color: #FFAD1C;
+  --tertiary-color: #1B1D20;
+}
+
+html, body {
+  background: var(--main-bg-color);
+  background-image: url('../img/concertlarge.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+  color: var(--main-text-color);
+  font-family: canada-type-gibson, roboto, helvetica, arial, sans-serif;
+  font-size: 16px;
+  overflow: auto;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 4rem;
+}
+
+#logo {
+  width: 10%;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 2.625rem;
+  width: 40rem;
+  line-height: 2.75rem;
+  margin-bottom: .25rem;
+  text-shadow: 0px 0px 5px #101011;
+}
+
+h2 {
+  color: var(--secondary-color);
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 3rem 0 2rem;
+  text-shadow: 0px 0px 5px #101011;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  line-height: 1.25rem;
+}
+
+p {
+  font-size: 1rem;
+  width: 33rem;
+  margin-bottom: 2rem;
+  text-shadow: 0px 0px 5px #101011;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  display: flex;
+  align-items: flex-start;
+  width: 30%;
+}
+
+li div {
+  width: 100%;
+}
+
+li img {
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+li p {
+  width: auto;
+}
+
+.mailto {
+  color: var(--secondary-color);
+  background: var(--tertiary-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: .875rem;
+  height: 45px;
+  line-height: 45px;
+  padding: 10px 20px;
+  border-radius: 45px;
+}
+
+.custom-mailchimp {
+  background: white;
+  font-family: canada-type-gibson, roboto, helvetica, arial, sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 5px 0 5px 5px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 2rem;
+}
+
+#mc-embedded-subscribe-form {
+  width: auto;
+  display: inline-block;
+}
+
+#mc-embedded-subscribe {
+  background: var(--secondary-color);
+  color: var(--main-bg-color);
+  height: 60px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0 30px;
+}
+
+#mc-embedded-subscribe:hover {
+  cursor: pointer;
+  background: #FFB412;
+}
+
+.email {
+  width: 33rem;
+  border: none;
+  outline: none;
+  padding-left: 1rem;
+}
+
+@media screen and (max-width: 1200px) { 
+  html, body {
+    background-image: url('../img/concertsmall.png');
+  }
+}
+
+@media screen and (max-width: 850px) { 
+  html, body {
+    background-image: url('../img/concertxsmall.png');
+  }
+  h1, p {
+    width: 100%;
+  }
+  ul {
+    flex-direction: column;
+  }
+  li {
+    width: 100%;
+  }
+  .mailto {
+    margin: 0 auto;
+    display: inline-block;
+  }
+  #mc-embedded-subscribe-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #mc-embedded-subscribe {
+    width: 100%;
+    margin-right: 5px;
+    border: none;
+    outline: none;
+    line-height: 60px;
+  }
+  .custom-mailchimp {
+    flex-direction: column;
+    height: auto;
+  }
+  .email {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    padding-right: 1rem;
+  }
+  #logo {
+    width: 20%;
+  }
+}
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
